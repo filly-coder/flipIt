@@ -37,7 +37,7 @@
 		}
 	],
 	"require": {
-		"php": "^7.2.5",
+		"php": "^7.4.3",
 		"aws/aws-sdk-php": "~3.0",
 		"bedigit/lara-recaptcha": "1.1.*",
 		"bileto/omnipay-payu": "dev-master",
