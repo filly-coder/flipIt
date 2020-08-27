@@ -36,7 +36,7 @@ try {
 	if (\Jackiedo\DotenvEditor\Facades\DotenvEditor::keyExists('MULTI_COUNTRIES_SEO_LINKS')) {
 		\Jackiedo\DotenvEditor\Facades\DotenvEditor::deleteKey('MULTI_COUNTRIES_SEO_LINKS');
 	}
-	\Jackiedo\DotenvEditor\Facades\DotenvEditor::setKey('LOG_CHANNEL', 'daily');
+	\Jackiedo\DotenvEditor\Facades\DotenvEditor::setKey('LOG_CHANNEL', 'stackdriver');
 	\Jackiedo\DotenvEditor\Facades\DotenvEditor::setKey('LOG_LEVEL', 'debug');
 	\Jackiedo\DotenvEditor\Facades\DotenvEditor::setKey('LOG_DAYS', 2);
 	\Jackiedo\DotenvEditor\Facades\DotenvEditor::save();

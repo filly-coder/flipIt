@@ -36,13 +36,13 @@ class DBTool
 		
 		// Database Parameters
 		$driver = isset($database['driver']) ? $database['driver'] : 'mysql';
-		$host = isset($database['host']) ? $database['host'] : '';
-		$port = isset($database['port']) ? $database['port'] : '';
-		$username = isset($database['username']) ? $database['username'] : '';
-		$password = isset($database['password']) ? $database['password'] : '';
-		$database = isset($database['database']) ? $database['database'] : '';
+		$host = env('DB_HOST', '127.0.0.1');
+		$port = env('DB_PORT', '3306');
+		$username = env('DB_USERNAME', 'forge');
+		$password = env('DB_PASSWORD', '');
+		$database = env('DB_DATABASE', 'forge');
 		$charset = isset($database['charset']) ? $database['charset'] : 'utf8';
-		$socket = isset($database['socket']) ? $database['socket'] : '';
+		$socket = env('DB_SOCKET', '');
 		$options = isset($database['options']) ? $database['options'] : [
 			\PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_OBJ,
 			\PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
@@ -55,15 +55,15 @@ class DBTool
 			if (empty($socket)) {
 				$dsn = $driver . ':host=' . $host . ';port=' . $port . ';dbname=' . $database . ';charset=' . $charset;
 			} else {
-				$dsn = $driver . ':unix_socket=' . $database['socket'] . ';dbname=' . $database . ';charset=' . $charset;
+				$dsn = $driver . ':unix_socket=' . $socket . ';dbname=' . $database . ';charset=' . $charset;
 			}
 			// Connect to the Database Server
 			return new \PDO($dsn, $username, $password, $options);
 			
 		} catch (\PDOException $e) {
-			$error = "<pre><strong>ERROR:</strong> Can't connect to the database server. " . $e->getMessage() . "</pre>";
+			$error = "<pre><strong>ERROR:</strong> Can't connect to the database server $database. " . $e->getMessage() . "</pre>";
 		} catch (\Exception $e) {
-			$error = "<pre><strong>ERROR:</strong> The database connection failed. " . $e->getMessage() . "</pre>";
+			$error = "<pre><strong>ERROR:</strong> tThe database connection failed. " . $e->getMessage() . "</pre>";
 		}
 		
 		die($error);

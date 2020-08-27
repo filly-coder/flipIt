@@ -16,7 +16,7 @@ return [
 	|
 	*/
 	
-	'default' => env('LOG_CHANNEL', 'stack'),
+	'default' => env('LOG_CHANNEL', 'stackdriver'),
 	
 	/*
 	|--------------------------------------------------------------------------
@@ -34,6 +34,12 @@ return [
 	*/
 	
 	'channels' => [
+        'stackdriver' => [
+            'driver' => 'custom',
+            'via' => App\Logging\CreateStackdriverLogger::class,
+            'level' => 'debug',
+        ],
+
 		'stack' => [
 			'driver' => 'stack',
 			'channels' => ['daily'],

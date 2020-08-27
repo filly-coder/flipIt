@@ -34,7 +34,7 @@ return [
     */
     
     'connections' => [
-        
+
         'mysql' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'localhost'),
@@ -46,18 +46,18 @@ return [
             'charset' => env('DB_CHARSET', 'utf8mb4'), // utf8mb4 => MySQL v5.7.7 or greater
             'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'), // utf8mb4_unicode_ci => MySQL v5.7.7 or greater
             'prefix' => env('DB_TABLES_PREFIX', ''),
-			'prefix_indexes' => env('DB_PREFIX_INDEXES', true),
+            'prefix_indexes' => env('DB_PREFIX_INDEXES', true),
             'strict' => env('DB_MODE_STRICT', false),
-			'engine' => env('DB_ENGINE', null),
-			'options' => extension_loaded('pdo_mysql') ? array_filter([
-				\PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-				\PDO::ATTR_EMULATE_PREPARES => true,
-			]) : [],
-			'dump' => [
-				'dump_binary_path' => env('DB_DUMP_BINARY_PATH', ''), // only the path, so without 'mysqldump' or 'pg_dump'.
-				'use_single_transaction', // perform dump using a single transaction.
-				'timeout' => 60 * 10, // 10 minute timeout
-			]
+            'engine' => env('DB_ENGINE', null),
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                \PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+                \PDO::ATTR_EMULATE_PREPARES => true,
+            ]) : [],
+            'dump' => [
+                'dump_binary_path' => env('DB_DUMP_BINARY_PATH', ''), // only the path, so without 'mysqldump' or 'pg_dump'.
+                'use_single_transaction', // perform dump using a single transaction.
+                'timeout' => 60 * 10, // 10 minute timeout
+            ]
         ],
     
     ],

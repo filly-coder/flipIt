@@ -85,7 +85,7 @@ trait CheckerTrait
 				'check' => func_enabled('escapeshellarg'),
 				'note'  => 'escapeshellarg() must be enabled.',
 			],
-			[
+			/*[
 				'type'  => 'permission',
 				'name'  => 'bootstrap/cache/',
 				'check' => file_exists(base_path('bootstrap/cache')) &&
@@ -93,10 +93,10 @@ trait CheckerTrait
 					(is_writable(base_path('bootstrap/cache'))) &&
 					getPerms(base_path('bootstrap/cache')) >= 755,
 				'note'  => 'The directory must be writable by the web server (0755).',
-			],
+			],*/
 			[
 				'type'  => 'permission',
-				'name'  => 'storage/',
+				'name'  => '/tmp',
 				'check' => (file_exists(storage_path('/')) &&
 					is_dir(storage_path('/')) &&
 					(is_writable(storage_path('/'))) &&
@@ -174,8 +174,9 @@ trait CheckerTrait
 		$array = json_decode($content, true);
 		
 		if (!isset($array['require']) || !isset($array['require']['php'])) {
-			echo "<pre><strong>ERROR:</strong> Impossible to get the composer.json's required PHP version value.</pre>";
-			exit();
+			echo "<pre><strong>ERROR:</strong> Impossible to get the composer.json's required PHP version value..</pre>";
+            print_r($array);
+			//exit();
 		}
 		
 		return Number::getFloatRawFormat($array['require']['php']);

@@ -82,7 +82,7 @@ trait EnvTrait
 		$content .= 'SESSION_DRIVER=file' . "\n";
 		$content .= 'SESSION_LIFETIME=10080' . "\n";
 		$content .= "\n";
-		$content .= 'LOG_CHANNEL=daily' . "\n";
+		$content .= 'LOG_CHANNEL=stackdriver' . "\n";
 		$content .= 'LOG_LEVEL=debug' . "\n";
 		$content .= 'LOG_DAYS=2' . "\n";
 		$content .= "\n";
