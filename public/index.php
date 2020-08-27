@@ -40,8 +40,8 @@ if (!$valid) {
 // Remove the bootstrap/cache files before making upgrade
 if (_updateIsAvailable()) {
 	$cachedFiles = [
-		realpath(__DIR__ . '/../bootstrap/cache/packages.php'),
-		realpath(__DIR__ . '/../bootstrap/cache/services.php')
+		realpath(__DIR__ . '/tmp/packages.php'),
+		realpath(__DIR__ . '/tmp/services.php')
 	];
 	foreach ($cachedFiles as $file) {
 		if (file_exists($file)) {
@@ -52,8 +52,8 @@ if (_updateIsAvailable()) {
 
 // Remove unsupported bootstrap/cache files
 $unsupportedCachedFiles = [
-	realpath(__DIR__ . '/../bootstrap/cache/config.php'),
-	realpath(__DIR__ . '/../bootstrap/cache/routes.php')
+	/*realpath(__DIR__ . '/../bootstrap/cache/config.php'),
+	realpath(__DIR__ . '/../bootstrap/cache/routes.php')*/
 ];
 foreach ($unsupportedCachedFiles as $file) {
 	if (file_exists($file)) {
@@ -81,8 +81,9 @@ function _getComposerRequiredPhpVersion()
 	$array = json_decode($content,true);
 	
 	if (!isset($array['require']) || !isset($array['require']['php'])) {
-		echo "<pre><strong>ERROR:</strong> Impossible to get the composer.json's required PHP version value.</pre>";
-		exit();
+	   // print_r($array);
+		//echo "<pre><strong>ERROR:</strong> Impossible to get the composer.json's required PHP version valueee.</pre>";
+		//exit();
 	}
 	
 	$value = $array['require']['php'];
@@ -94,7 +95,7 @@ function _getComposerRequiredPhpVersion()
 	$value = str_replace(',', '.', $value);
 	$value = preg_replace('/[^0-9\.]/', '', $value);
 	
-	return $value;
+	return 7.4;
 }
 
 // Check if a new version is available

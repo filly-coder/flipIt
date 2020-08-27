@@ -182,7 +182,7 @@ return [
 		Larapen\Impersonate\ImpersonateServiceProvider::class,
 		Jackiedo\DotenvEditor\DotenvEditorServiceProvider::class,
 		Unicodeveloper\Paystack\PaystackServiceProvider::class,
-    
+        Superbalist\LaravelGoogleCloudStorage\GoogleCloudStorageServiceProvider::class,
     
     ],
     

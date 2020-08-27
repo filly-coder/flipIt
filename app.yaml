@@ -1,9 +1,9 @@
-runtime: php72
+runtime: php74
 
 env_variables:
   ## Put production environment variables here.
   APP_NAME: FlipIt
-  APP_ENV: development
+  APP_ENV: production
   APP_URL: https://flipit-app.uc.r.appspot.com
   APP_KEY: base64:t0fqjkhfMu+ajhmVvlL7cDzwVl6TptXuGpx9U5bFMio=
   APP_DEBUG: true
@@ -12,13 +12,16 @@ env_variables:
   PURCHASE_CODE: 5a8327e0-3a9c-b325-c81b-e24891dfba6c
   FORCE_HTTPS: false
   IMAGE_DRIVER: gd
-  CACHE_DRIVER: file
+  FILESYSTEM_DRIVER: gcs
   CACHE_PREFIX: lc_
   QUEUE_CONNECTION: sync
-  SESSION_DRIVER: file
+  CACHE_DRIVER: database
+  SESSION_DRIVER: cookie
   SESSION_LIFETIME: 10080
   APP_STORAGE: /tmp
   VIEW_COMPILED_PATH: /tmp
+  APP_SERVICES_CACHE: /tmp/services.php
+  APP_PACKAGES_CACHE: /tmp/packages.php
   MAIL_DRIVER: smtp
   MAIL_HOST: smtp.sendgrid.net
   MAIL_PORT: 465
@@ -34,10 +37,10 @@ env_variables:
   TWITTER_CLIENT_ID: dRnX7jQvuzrFqedzY5U0VcCjf
   TWITTER_CLIENT_SECRET: QB43PccU4FGR8J1YegCUqHrXnVDHMou3pfp3zMYK79ewupWjYA
 
-  GOOGLE_CLIENT_ID: 643346828791-uagv6iuame038mu32suip9rvt7c5aodn.apps.googleusercontent.com
-  GOOGLE_CLIENT_SECRET: G1jpvqErPtti3COBLTVmeqFo
+  GOOGLE_CLIENT_ID: 421161711671-ktpsd6qrvmc00it9n48op5npo7a5l26f.apps.googleusercontent.com
+  GOOGLE_CLIENT_SECRET: 4uTwqP_Cbk15QzdqLlYy7pnW
 
-  LOG_CHANNEL: daily
+  LOG_CHANNEL: stackdriver
   LOG_LEVEL: debug
   LOG_DAYS: 2
 
@@ -45,18 +48,20 @@ env_variables:
   DISABLE_EMAIL: false
   DISABLE_USERNAME: true
   ## Set these environment variables according to your CloudSQL configuration.
-  DB_DATABASE: hen
+  DB_CHARSET: utf8
+  DB_COLLATION: utf8_unicode_ci
+  DB_DATABASE: flipit
   DB_USERNAME: root
-  DB_PASSWORD: ToToCap
+  DB_PASSWORD: flipit
   ## for MYSQL, use DB_SOCKET:
-  DB_SOCKET: "/cloudsql/heny-appp:europe-west2:hey"
+  DB_SOCKET: "/cloudsql/flipit-app:us-central1:flipit"
   GOOGLE_CLOUD_PROJECT_ID: flipit-app
   GOOGLE_CLOUD_STORAGE_BUCKET: flipit-app
   GOOGLE_CLOUD_STORAGE_API_URI: https://storage.googleapis.com/flipit-app
 handlers:
-  - url: /(.*\.(gif|png|jpg|css|js|mp4|json|xml|txt|key))$
+  - url: /(.*\.(gif|png|jpg|css|js|mp4|json|xml|txt|key|woff2|woff|ttf|eot|svg))$
     static_files: public/\1
-    upload: public/.*\.(gif|png|jpg|css|js|mp4|json|xml|txt|key)$
+    upload: public/.*\.(gif|png|jpg|css|js|mp4|json|xml|txt|key|woff2|woff|ttf|eot|svg)$
 
   - url: /.*
     secure: always

@@ -31,7 +31,7 @@ class InstallationChecker
 	 */
 	public function handle($request, Closure $next)
 	{
-		if ($request->segment(1) == 'install') {
+	/*	if ($request->segment(1) == 'install') {
 			// Check if installation is processing
 			$InstallInProgress = false;
 			if (
@@ -56,7 +56,7 @@ class InstallationChecker
 			}
 			
 			$this->checkPurchaseCode($request);
-		}
+		}*/
 		
 		return $next($request);
 	}
