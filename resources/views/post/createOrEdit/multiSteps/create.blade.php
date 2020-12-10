@@ -28,7 +28,7 @@
 				<div class="col-md-9 page-content">
 					<div class="inner-box category-content">
 						<h2 class="title-2">
-							<strong><i class="icon-docs"></i> {{ t('Post Free Ads') }}</strong>
+							<strong><i class="icon-docs"></i> Sell an Item</strong>
 						</h2>
 						
 						<div class="row">
@@ -145,7 +145,7 @@
 										<!-- price -->
 										<?php $priceError = (isset($errors) and $errors->has('price')) ? ' is-invalid' : ''; ?>
 										<div id="priceBloc" class="form-group row">
-											<label class="col-md-3 col-form-label" for="price">Buy Now Price</label>
+											<label class="col-md-3 col-form-label" for="price">Buy it Now Price</label>
 											<div class="input-group col-md-8">
 												<div class="input-group-prepend">
 													<span class="input-group-text">{!! config('currency')['symbol'] !!}</span>
@@ -154,7 +154,7 @@
 												<input id="price"
 													   name="price"
 													   class="form-control{{ $priceError }}"
-													   placeholder="{{ t('e.i. 15000') }}"
+													   placeholder="eg 140"
 													   type="text" value="{{ old('price') }}"
 												>
 												
@@ -176,7 +176,7 @@
 												<input id="low_price"
 													   name="low_price"
 													   class="form-control{{ $priceError }}"
-													   placeholder="{{ t('e.i. 15000') }}"
+													   placeholder="eg 90"
 													   type="text" value="{{ old('low_price') }}"
 												>
 
@@ -262,10 +262,10 @@
 										</div>
 										
 										
-										<div class="content-subheading">
+									{{--	<div class="content-subheading">
 											<i class="icon-user fa"></i>
 											<strong>{{ t('Seller information') }}</strong>
-										</div>
+										</div>--}}
 										
 										
 										<!-- contact_name -->
@@ -273,30 +273,23 @@
 										@if (auth()->check())
 											<input id="contact_name" name="contact_name" type="hidden" value="{{ auth()->user()->name }}">
 										@else
-											<div class="form-group row required">
+										{{--	<div class="form-group row required">
 												<label class="col-md-3 col-form-label" for="contact_name">{{ t('Your name') }} <sup>*</sup></label>
 												<div class="col-md-8">
 													<input id="contact_name" name="contact_name" placeholder="{{ t('Your name') }}"
 														   class="form-control input-md{{ $contactNameError }}" type="text" value="{{ old('contact_name') }}">
 												</div>
-											</div>
+											</div>--}}
 										@endif
 									
 										<!-- email -->
 										<?php $emailError = (isset($errors) and $errors->has('email')) ? ' is-invalid' : ''; ?>
-										<div class="form-group row required">
-											<label class="col-md-3 col-form-label" for="email"> {{ t('Email') }} </label>
-											<div class="input-group col-md-8">
-												<div class="input-group-prepend">
-													<span class="input-group-text"><i class="icon-mail"></i></span>
-												</div>
+
 												
 												<input id="email" name="email"
-													   class="form-control{{ $emailError }}" placeholder="{{ t('Email') }}" type="text"
+													   class="form-control{{ $emailError }}" placeholder="{{ t('Email') }}" type="hidden"
 													   value="{{ old('email', ((auth()->check() and isset(auth()->user()->email)) ? auth()->user()->email : '')) }}">
-											</div>
-										</div>
-										
+
 										<?php
 											if (auth()->check()) {
 												$formPhone = (auth()->user()->country_code == config('country.code')) ? auth()->user()->phone : '';
@@ -306,27 +299,14 @@
 										?>
 										<!-- phone -->
 										<?php $phoneError = (isset($errors) and $errors->has('phone')) ? ' is-invalid' : ''; ?>
-										<div class="form-group row required">
-											<label class="col-md-3 col-form-label" for="phone">{{ t('Phone Number') }}</label>
-											<div class="input-group col-md-8">
-												<div class="input-group-prepend">
-													<span id="phoneCountry" class="input-group-text">{!! getPhoneIcon(config('country.code')) !!}</span>
-												</div>
-												
+
 												<input id="phone" name="phone"
 													   placeholder="{{ t('Phone Number') }}"
-													   class="form-control input-md{{ $phoneError }}" type="text"
+													   class="form-control input-md{{ $phoneError }}" type="hidden"
 													   value="{{ phoneFormat(old('phone', $formPhone), old('country', config('country.code'))) }}"
 												>
 												
-												<div class="input-group-append">
-													<span class="input-group-text">
-														<input name="phone_hidden" id="phoneHidden" type="checkbox"
-															   value="1" {{ (old('phone_hidden')=='1') ? 'checked="checked"' : '' }}>&nbsp;<small>{{ t('Hide') }}</small>
-													</span>
-												</div>
-											</div>
-										</div>
+
 										
 										@if (!auth()->check())
 											@if (in_array(config('settings.single.auto_registration'), [1, 2]))
@@ -392,7 +372,7 @@
 						<div class="promo-text-box"><i class=" icon-picture fa fa-4x icon-color-1"></i>
 							<h3><strong>{{ t('Post Free Ads') }}</strong></h3>
 							<p>
-								{{ t('Do you have something to sell, to rent, any service to offer or a job offer? Post it at :app_name, its free, local, easy, reliable and super fast!', ['app_name' => config('app.name')]) }}
+								Do you have new or used items lying around that you want to sell? Sell your item through Flip It, it's very easy to use, and your item will be posted on many marketplace platforms
 							</p>
 						</div>
 
@@ -442,7 +422,7 @@
 				'admin': "{{ t('Select a location') }}",
 				'city': "{{ t('Select a city') }}"
 			},
-			'price': "{{ t('Price') }}",
+			'price': "Buy It Now Price",
 			'salary': "{{ t('Salary') }}",
 			'nextStepBtnLabel': {
 			    'next': "{{ t('Next') }}",

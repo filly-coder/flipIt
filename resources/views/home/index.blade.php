@@ -32,6 +32,11 @@
             </div>
         @endif
 
+        <div class="h-spacer"></div>
+        <div class="container">
+            <img src="{{asset('images/RevDiagramBlueText.png')}}" style="padding-left: 25%;padding-right: 25%">
+        </div>
+
 
         @if (isset($sections) and $sections->count() > 0)
             @foreach($sections as $section)

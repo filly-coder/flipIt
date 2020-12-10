@@ -11,7 +11,7 @@
 					<ul class="acc-list">
 						<li>
 							<a {!! ($pagePath=='') ? 'class="active"' : '' !!} href="{{ lurl('account') }}">
-								<i class="icon-home"></i> {{ t('Personal Home') }}
+								<i class="icon-home"></i> Account Information
 							</a>
 						</li>
 					</ul>

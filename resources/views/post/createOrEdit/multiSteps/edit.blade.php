@@ -174,7 +174,7 @@ if ($post->category) {
 										<!-- price -->
 										<?php $priceError = (isset($errors) and $errors->has('price')) ? ' is-invalid' : ''; ?>
 										<div id="priceBloc" class="form-group row required">
-											<label class="col-md-3 col-form-label" for="price">Buy Now Price</label>
+											<label class="col-md-3 col-form-label" for="price">Buy it Now Price</label>
 											<div class="input-group col-md-8">
 												<div class="input-group-prepend">
 													<span class="input-group-text">{!! config('currency')['symbol'] !!}</span>

@@ -12,7 +12,7 @@ if (config('settings.listing.display_mode') == '.compact-view') {
 ?>
 @if (isset($posts) and count($posts) > 0)
 	@include('home.inc.spacer')
-	<div class="container">
+{{--	<div class="container">
 		<div class="col-xl-12 layout-section">
 			<div class="row row-featured row-featured-category">
 				<div class="col-md-6"><img
@@ -26,7 +26,7 @@ if (config('settings.listing.display_mode') == '.compact-view') {
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>--}}
 	<div class="container">
 		<div class="col-xl-12 content-box layout-section">
 			<div class="row row-featured row-featured-category">

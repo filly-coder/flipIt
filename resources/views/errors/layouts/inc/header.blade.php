@@ -101,7 +101,7 @@ if (getSegment(1) != trans('routes.countries')) {
 							<ul id="userMenuDropdown" class="dropdown-menu user-menu dropdown-menu-right shadow-sm">
                                 <li class="dropdown-item active">
                                     <a href="{{ url(config('app.locale') . '/account') }}">
-                                        <i class="icon-home"></i> {{ t('Personal Home') }}
+                                        <i class="icon-home"></i> Account Information
                                     </a>
                                 </li>
                                 <li class="dropdown-item">
