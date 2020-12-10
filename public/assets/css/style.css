@@ -3381,7 +3381,8 @@ html[dir="rtl"] body .intro h1, .intro html[dir="rtl"] body h1, html[dir="rtl"] 
 
 .f-category img {
 	display: block;
-	height: 90px;
+	width: 45%;
+	height: 45%;
 	margin: 0 auto;
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
@@ -3559,7 +3560,8 @@ html[dir="rtl"] body .intro h1, .intro html[dir="rtl"] body h1, html[dir="rtl"] 
 	}
 	
 	.f-category img {
-		height: 60px;
+		width: 50%;
+		height: 50%;
 	}
 }
 

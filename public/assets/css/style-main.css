@@ -378,7 +378,8 @@ a:hover, a:focus {
 }
 
 .f-category img {
-	height: 60px;
+	width: 50%;
+	height: 50%;
 }
 
 .content-box {

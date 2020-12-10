@@ -170,7 +170,7 @@
 										<!-- price -->
 										<?php $priceError = (isset($errors) and $errors->has('price')) ? ' is-invalid' : ''; ?>
 										<div id="priceBloc" class="form-group row">
-											<label class="col-md-3 col-form-label" for="price">{{ t('Price') }}</label>
+											<label class="col-md-3 col-form-label" for="price">Buy It Now Price</label>
 											<div class="input-group col-md-8">
 												<div class="input-group-prepend">
 													<span class="input-group-text">{!! config('currency')['symbol'] !!}</span>
@@ -179,7 +179,7 @@
 												<input id="price"
 													   name="price"
 													   class="form-control{{ $priceError }}"
-													   placeholder="{{ t('e.i. 15000') }}"
+													   placeholder="{{ t('e.i. 140') }}"
 													   type="text" value="{{ old('price') }}"
 												>
 												
@@ -403,8 +403,8 @@
 						<div class="promo-text-box"><i class=" icon-picture fa fa-4x icon-color-1"></i>
 							<h3><strong>{{ t('Post Free Ads') }}</strong></h3>
 							<p>
-								{{ t('Do you have something to sell, to rent, any service to offer or a job offer? Post it at :app_name, its free, local, easy, reliable and super fast!', ['app_name' => config('app.name')]) }}
-							</p>
+								Do you have new or used items lying around that you want to sell? Sell your item through Flip It, it's very easy to use, and your item will be posted on many marketplace platforms
+								</p>
 						</div>
 
 						<div class="card sidebar-card">

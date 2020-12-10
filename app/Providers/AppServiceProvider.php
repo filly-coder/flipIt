@@ -60,7 +60,7 @@ class AppServiceProvider extends ServiceProvider
 		}
 		
 		// Create the local storage symbolic link
-		$this->checkAndCreateStorageSymlink();
+		// $this->checkAndCreateStorageSymlink();
 		
 		// Setup ACL system
 		$this->setupAclSystem();
@@ -97,7 +97,7 @@ class AppServiceProvider extends ServiceProvider
 	 */
 	private function checkAndCreateStorageSymlink()
 	{
-		$symlink = public_path('storage');
+		/*$symlink = public_path('tmp');
 		
 		try {
 			if (!is_link($symlink)) {
@@ -124,7 +124,7 @@ class AppServiceProvider extends ServiceProvider
 			$message = $message . ' - Please <a href="' . $docSymlink . '" target="_blank">see this article</a> for more information.';
 			
 			flash($message)->error();
-		}
+		}*/
 	}
 	
 	/**

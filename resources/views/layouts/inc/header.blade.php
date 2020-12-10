@@ -35,10 +35,7 @@ if (getSegment(1) != trans('routes.countries')) {
                 {{-- Logo --}}
                 <a href="{{ lurl('/') }}" class="navbar-brand logo logo-title">
                     <img src="{{ imgUrl(config('settings.app.logo'), 'logo') }}"
-                         alt="{{ strtolower(config('settings.app.app_name')) }}" class="tooltipHere main-logo" title=""
-                         data-placement="bottom"
-                         data-toggle="tooltip"
-                         data-original-title="{!! isset($logoLabel) ? $logoLabel : '' !!}"/>
+                         alt="{{ strtolower(config('settings.app.app_name')) }}" class="tooltipHere main-logo" title=""/>
                 </a>
                 {{-- Toggle Nav (Mobile) --}}
                 <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggler pull-right"
@@ -51,7 +48,7 @@ if (getSegment(1) != trans('routes.countries')) {
                     </svg>
                 </button>
                 {{-- Country Flag (Mobile) --}}
-                @if (getSegment(1) != trans('routes.countries'))
+              {{--  @if (getSegment(1) != trans('routes.countries'))
                     @if (isset($multiCountriesIsEnabled) and $multiCountriesIsEnabled)
                         @if (!empty(config('country.icode')))
                             @if (file_exists(public_path() . '/images/flags/24/' . config('country.icode') . '.png'))
@@ -64,13 +61,13 @@ if (getSegment(1) != trans('routes.countries')) {
                             @endif
                         @endif
                     @endif
-                @endif
+                @endif--}}
             </div>
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-left">
                     {{-- Country Flag --}}
-                    @if (getSegment(1) != trans('routes.countries'))
+                   {{-- @if (getSegment(1) != trans('routes.countries'))
                         @if (config('settings.geo_location.country_flag_activation'))
                             @if (!empty(config('country.icode')))
                                 @if (file_exists(public_path() . '/images/flags/32/' . config('country.icode') . '.png'))
@@ -93,18 +90,18 @@ if (getSegment(1) != trans('routes.countries')) {
                                 @endif
                             @endif
                         @endif
-                    @endif
+                    @endif--}}
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item"><a href="{{ lurl('/') }}" class="nav-link"> {{ t('Home') }}</a></li>
                     <li class="nav-item dropdown no-arrow">
                         <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                            <span>Selling With FlipIt</span>
+                            <span>Selling With Flip It</span>
                             <i class="icon-down-open-big fa hidden-sm"></i>
                         </a>
                         <ul id="userMenuDropdown" class="dropdown-menu user-menu dropdown-menu-right shadow-sm">
-                            <li class="dropdown-item"><a href="#"> How it works</a></li>
-                            <li class="dropdown-item"><a href="#"> Testimonials</a></li>
+                            <li class="dropdown-item"><a href="{{ lurl('/page/how-it-works') }}"> How it works</a></li>
+                            <li class="dropdown-item"><a href="{{ lurl('/page/testimonials') }}"> Testimonials</a></li>
                         </ul>
                     </li>
 
@@ -121,20 +118,20 @@ if (getSegment(1) != trans('routes.countries')) {
 					{{--<li class="nav-item"><a href="{{ lurl('/search') }}"
 											class="nav-link"> {{ t('Browse Marketplace') }}</a></li>--}}
                 </ul>
-                <ul class="nav navbar-nav ml-auto navbar-right">
+                <ul class="nav navbar-nav navbar-right ml-1">
 					<div class="search-row animated fadeInUp">
 						<?php $attr = ['countryCode' => config('country.icode')]; ?>
 						<form id="search" name="search" action="{{ lurl(trans('routes.v-search', $attr), $attr) }}" method="GET">
 							<div class="row m-0">
 								<div class="col-sm-10 col-xs-10 search-col relative">
 									<i class="icon-docs icon-append"></i>
-									<input type="text" name="q" class="form-control keyword has-icon" placeholder="{{ t('What?') }}" value="">
+									<input type="text" name="q" class="form-control keyword has-icon" placeholder="{{ t('Search') }}" value="">
 								</div>
 
 									<input type="hidden" id="lSearch" name="l" value="">
 
 										<input type="hidden" id="locSearch" name="location" class="form-control locinput input-rel searchtag-input has-icon"
-											   placeholder="{{ t('Where?') }}" value="">
+											   placeholder="{{ t('Search') }}" value="">
 
 
 
@@ -183,7 +180,7 @@ if (getSegment(1) != trans('routes.countries')) {
                             <ul id="userMenuDropdown" class="dropdown-menu user-menu dropdown-menu-right shadow-sm">
                                 <li class="dropdown-item active">
                                     <a href="{{ lurl('account') }}">
-                                        <i class="icon-home"></i> {{ t('Personal Home') }}
+                                        <i class="icon-home"></i> Account Information
                                     </a>
                                 </li>
                                 <li class="dropdown-item"><a href="{{ lurl('account/my-posts') }}"><i
