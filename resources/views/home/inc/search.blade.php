@@ -95,7 +95,7 @@ if (file_exists(config('larapen.core.maps.path') . config('country.icode') . '.s
                 <div class="container text-center">
 
                     @if ($sForm['hideTitles'] != '1')
-                        <div class="text-center mb-5 mt-5">
+                        <div class="text-center my-5">
                             <h1 class="text-center">Selling Online Has Never Been Easier</h1>
                             <a href="" class="btn btn-primary">Register Here</a>
                         </div>
@@ -204,74 +204,72 @@ if (file_exists(config('larapen.core.maps.path') . config('country.icode') . '.s
 
 <div class="container text-center">
 
-    <div class="col-xl-12 content-box layout-section" style="border: none!important;">
-        <div class="row row-featured row-featured-category">
+    <div class="col-xl-12 content-box layout-section mt-4" style="border: none!important;">
+        <div class="row row-featured row-featured-category justify-content-between"  style="font-size: 18px !important; line-height: 2em;">
             <div class="col-xl-12 box-title no-border">
                 <div class="inner">
 
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 f-category p-5" style="border: none!important;">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 px-4">
+               <div class="my-4">
+                    <img src="{{asset('images/US Outline Clipart.jpg')}}" class="img-fluid" style="width: 350px; height: unset;">
+                    <h3 style="font-size: 25px;">Easy to Use</h3>
 
-                <img src="{{asset('images/US Outline Clipart.jpg')}}" >
-                <h3>Easy to Use</h3>
+                    <ul class="text-left">
+                        <li style="list-style: disc!important;">Sell items with our all-in-one system</li>
+                        <li style="list-style: disc!important;"> Choose to post at a local or national level</li>
+                        <li style="list-style: disc!important;">Easily manage and edit your listings on one platform</li>
 
-                <ul style="text-align: left!important;">
-                    <li style="list-style: disc!important;">Sell items with our all-in-one system</li>
-                    <li style="list-style: disc!important;"> Choose to post at a local or national level</li>
-                    <li style="list-style: disc!important;">Easily manage and edit your listings on one platform</li>
-
-                </ul>
-
-
+                    </ul>
+               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 f-category p-5" style="border: none!important;">
-                <img src="{{asset('images/No Scam Zone Graphic.png')}}">
-                <h3>Minimize Time</h3>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 px-4" style="border: none!important;">
+                <div class="my-4">
+                    <img src="{{asset('images/No Scam Zone Graphic.png')}}"  style="width: 250px; height: unset;">
+                    <h3  style="font-size: 25px;" class="mt-2">Minimize Time</h3>
 
-                <ul style="text-align: left!important;">
+                    <ul class="text-left">
 
-                    <li style="list-style: disc!important;">Filters low offers and passive buyers</li>
-                    <li style="list-style: disc!important;">Avoid potential scammers</li>
-                    <li style="list-style: disc!important;"> Conveniently monitors your offers</li>
-                    <li style="list-style: disc!important;">Automatically lower the price after a custom duration</li>
-                </ul>
-
-
+                        <li style="list-style: disc!important;">Filters low offers and passive buyers</li>
+                        <li style="list-style: disc!important;">Avoid potential scammers</li>
+                        <li style="list-style: disc!important;"> Conveniently monitors your offers</li>
+                        <li style="list-style: disc!important;">Automatically lower the price after a custom duration</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 f-category p-5" style="border: none!important;">
-                <img src="{{asset('images/Magnifying glass clipart.png')}}">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 px-4 pt-4" style="border: none!important;">
+                <div class="my-4">
+                    <img src="{{asset('images/Magnifying glass clipart.png')}}">
 
-                <h3>Maximize Profits</h3>
+                    <h3  style="font-size: 25px;" class="mt-2">Maximize Profits</h3>
 
-                <ul style="text-align: left!important;">
+                    <ul class="text-left">
 
-                    <li style="list-style: disc!important;">Post items on 4+ targeted marketplace platforms to reach
-                        different audiences
-                    </li>
-                    <li style="list-style: disc!important;"> Maximize your online presence</li>
+                        <li style="list-style: disc!important;">Post items on 4+ targeted marketplace platforms to reach
+                            different audiences
+                        </li>
+                        <li style="list-style: disc!important;"> Maximize your online presence</li>
 
-                </ul>
-
-
+                    </ul>
+                </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 f-category p-5" style="border: none!important;">
-                <img src="{{asset('images/open-book-clipart-15-300x300.png')}}">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 px-4 pt-4" style="border: none!important;">
+                <div class="my-4">
+                    <img src="{{asset('images/open-book-clipart-15-300x300.png')}}" style="width: 210px; height: unset;">
 
-                <h3>Market Research</h3>
+                    <h3  style="font-size: 25px;">Market Research</h3>
 
-                <ul style="text-align: left!important;">
+                    <ul class="text-left">
 
-                    <li style="list-style: disc!important;"> Flip It will research your item and find comparables in the
-                        market to help price your item
-                    </li>
+                        <li style="list-style: disc!important;"> Flip It will research your item and find comparables in the
+                            market to help price your item
+                        </li>
 
-                </ul>
-
-
+                    </ul>
+                </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -284,13 +282,13 @@ if (file_exists(config('larapen.core.maps.path') . config('country.icode') . '.s
         </div>
     </div>
     <div class="col-xl-12 layout-section">
-        <div class="row row-featured row-featured-category">
+        <div class="row row-featured row-featured-category justify-content-between"  style="font-size: 17px !important; line-height: 1.9em;">
 
 
-            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 f-category p-5"
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 px-5"
                  style="background: #1685d7;text-align: left!important;">
 
-                <h3>Sit back, relax, and have your items posted for you!</h3>
+                <h3 class="pt-5" style="font-size: 25px;">Sit back, relax, and have your items posted for you!</h3>
                 <h5>In-person service include: </h5>
                 <ul style="font-size: larger">
                     <li style="list-style: disc!important;">Meet at your location of preference</li>
@@ -303,12 +301,11 @@ if (file_exists(config('larapen.core.maps.path') . config('country.icode') . '.s
                     <li style="list-style: disc!important;">Perform in-person "meetups"</li>
 
                 </ul>
-
             </div>
-            <div class="col-lg-offset-1 col-md-offset-1 col-lg-6 col-md-6">
-                <img src="{{asset('images/AlexFlipItCharacterTransparent.png')}}" style="width: 65%"/>
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <img src="{{asset('images/AlexFlipItCharacterTransparent.png')}}" style="width: 60%"/>
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-12 mt-3">
                 <h4 style="text-align: center">
                     <a href="https://meetings.hubspot.com/flipittoday20191" target="_blank">Click Here</a>
                     to schedule an in-person consultation
@@ -322,6 +319,6 @@ if (file_exists(config('larapen.core.maps.path') . config('country.icode') . '.s
 <div class="h-spacer"></div>
 <div class="container text-center">
     <h2>What Our Customers Say</h2>
-    <img src="{{asset('images/FlipItJettaTestimonialV2.png')}}" style="padding-left: 20%;padding-right: 20%">
+    <img src="{{asset('images/FlipItJettaTestimonialV2.png')}}" class="px-3">
 
 </div>
