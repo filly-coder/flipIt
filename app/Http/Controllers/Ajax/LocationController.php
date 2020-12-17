@@ -57,18 +57,21 @@ class LocationController extends FrontController
 			if ($cities->count() > 0) {
 				foreach ($cities as $city) {
 					$value = $city->name;
-					if (isset($city->subAdmin2) && !empty($city->subAdmin2)) {
-						$value .= ', ' . $city->subAdmin2->name;
-
-						// attach the state name
-						if (isset($city->subAdmin1) && !empty($city->subAdmin1)) {
+					if (isset($city->subAdmin1) && !empty($city->subAdmin1)) {
 							$value .= ', ' . $city->subAdmin1->name;
-						}
-					} else {
-						if (isset($city->subAdmin1) && !empty($city->subAdmin1)) {
-							$value .= ', ' . $city->subAdmin1->name;
-						}
 					}
+					// if (isset($city->subAdmin2) && !empty($city->subAdmin2)) {
+					// 	$value .= ', ' . $city->subAdmin2->name;
+
+					// 	// attach the state name
+					// 	if (isset($city->subAdmin1) && !empty($city->subAdmin1)) {
+					// 		$value .= ', ' . $city->subAdmin1->name;
+					// 	}
+					// } else {
+					// 	if (isset($city->subAdmin1) && !empty($city->subAdmin1)) {
+					// 		$value .= ', ' . $city->subAdmin1->name;
+					// 	}
+					// }
 					$citiesArr[] = [
 						'data'  => $city->id,
 						'value' => $value,
