@@ -209,13 +209,20 @@ class LocationController extends FrontController
 		if ($cities->count() > 0) {
 			foreach ($cities as $city) {
 				$text = $city->name;
-				if (isset($city->subAdmin2) && !empty($city->subAdmin2)) {
-					$text .= ', ' . $city->subAdmin2->name;
-				} else {
-					if (isset($city->subAdmin1) && !empty($city->subAdmin1)) {
+				// get only state for cities
+				if (isset($city->subAdmin1) && !empty($city->subAdmin1)) {
 						$text .= ', ' . $city->subAdmin1->name;
-					}
 				}
+
+				// ignoring cities that come with county as the default code
+				
+				// if (isset($city->subAdmin2) && !empty($city->subAdmin2)) {
+				// 	$text .= ', ' . $city->subAdmin2->name;
+				// } else {
+				// 	if (isset($city->subAdmin1) && !empty($city->subAdmin1)) {
+				// 		$text .= ', ' . $city->subAdmin1->name;
+				// 	}
+				// }
 				$citiesArr[] = [
 					'id'   => $city->id,
 					'text' => $text,
@@ -348,4 +355,4 @@ class LocationController extends FrontController
 		
 		return response()->json($result, 200, [], JSON_UNESCAPED_UNICODE);
 	}
-}
+} 
