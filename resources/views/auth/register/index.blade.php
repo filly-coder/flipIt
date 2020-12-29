@@ -283,7 +283,7 @@
 						<div class="promo-text-box"><i class="icon-picture fa fa-4x icon-color-1"></i>
 							<h3><strong>{{ t('Post a Free Classified') }}</strong></h3>
 							<p>
-								{{ t('Do you have something to sell, to rent, any service to offer or a job offer? Post it at :app_name, its free, local, easy, reliable and super fast!',
+								{{ t('Do you have new or used items lying around that you want to sell? Sell your item through :app_name, its very easy to use, and your item will be posted on many marketplace platforms',
 								['app_name' => config('app.name')]) }}
 							</p>
 						</div>

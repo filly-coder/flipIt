@@ -50,7 +50,7 @@ return [
     'Sell, Buy and Rent your products and services on :app_name in Minutes' => '<strong>Sell</strong>, <strong>Buy</strong> and <strong>Rent</strong> your products and services on :app_name in Minutes',
     'Sell and Buy products and services on :app_name in Minutes' => '<strong>Sell</strong> and <strong>Buy</strong> products and services on :app_name in Minutes',
     'Sell, Buy and Rent products and services on :app_name in Minutes' => '<strong>Sell</strong>, <strong>Buy</strong> and <strong>Rent</strong> products and services on :app_name in Minutes',
-    'Post Free Ads' => 'Post Free Ads',
+    'Post Ads' => 'Post Ads',
     'Start Now!' => 'Start Now!',
     'e.g. Smartphone' => 'e.g. Smartphone',
     'All Categories' => 'All Categories',
@@ -134,7 +134,7 @@ return [
     'Your message has been sent to our moderators. Thank you' => 'Your message has been sent to our moderators. Thank you.',
     
     'Post a Free Classified' => 'Post a Free Classified',
-    'Do you have something to sell, to rent, any service to offer or a job offer? Post it at :app_name, its free, local, easy, reliable and super fast!' => 'Do you have something to sell, to rent, any service to offer or a job offer? Post it at :app_name, its free, for local business and very easy to use!',
+    'Do you have new or used items lying around that you want to sell? Sell your item through :app_name, its very easy to use, and your item will be posted on many marketplace platforms' => 'Do you have new or used items lying around that you want to sell? Sell your item through :app_name, its very easy to use, and your item will be posted on many marketplace platforms',
     'Create and Manage Items' => 'Create and Manage Items',
     'Become a best seller or buyer. Create and Manage your ads. Repost your old ads, etc.' => 'Become a best seller or buyer. Create and Manage your ads. Repost your old ads, etc.',
     'Create your Favorite ads list.' => 'Create your Favorite ads list.',

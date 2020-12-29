@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <!-- Mercari -->
-                    <div class="hot-spot" x="700" y="150">
+                    <div class="hot-spot" x="500" y="760">
                         <div class="circle"></div>
                         <div class="tooltip">
                             <div class="text-row">
@@ -114,6 +114,19 @@
                                 <span class="font-weight-bold">User Count: </span class="font-weight-bold"> 55+ Million Monthly
                                 <br>
                                 <span>Founded: </span>1995</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nextdoor -->
+                    <div class="hot-spot" x="700" y="150">
+                        <div class="circle"></div>
+                        <div class="tooltip">
+                            <div class="text-row">
+                                <h4>Nextdoor</h4>
+                                <p>Nextdoor is a platform focused on the surrounding community. Nextdoor has an announcement section and a marketplace section. Nextdoor offers a variety of categories and is a local platform meant for meetups and not shipping. <br>
+                                <span class="font-weight-bold">User Count: </span class="font-weight-bold"> 27+ Million Monthly
+                                <br>
+                                <span>Founded: </span>2008</p>
                             </div>
                         </div>
                     </div>

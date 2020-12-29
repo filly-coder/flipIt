@@ -370,7 +370,7 @@
 				<div class="col-md-3 reg-sidebar">
 					<div class="reg-sidebar-inner text-center">
 						<div class="promo-text-box"><i class=" icon-picture fa fa-4x icon-color-1"></i>
-							<h3><strong>{{ t('Post Free Ads') }}</strong></h3>
+							<h3><strong>{{ t('Post Ads') }}</strong></h3>
 							<p>
 								Do you have new or used items lying around that you want to sell? Sell your item through Flip It, it's very easy to use, and your item will be posted on many marketplace platforms
 							</p>
