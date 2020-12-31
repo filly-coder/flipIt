@@ -64,7 +64,7 @@
         <div class="container my-5">
             <div class="row justify-centent-center responsive-hotspot-wrap mb-5" id="hotspotImg">
                 <div class="col-xl-12 col-md-12 col-sm-12 text-center" >
-                    <img src="{{asset('images/RevDiagramBlueText.png')}}" class="img-fluid img-responsive">
+                    <img src="{{asset('images/RevDiagramBlueTextNew.png')}}" class="img-fluid img-responsive">
                     <!-- Facebook Marketplace -->
                     <div class="hot-spot" x="500" y="15">
                         <div class="circle"></div>
