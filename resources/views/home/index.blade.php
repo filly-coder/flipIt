@@ -14,6 +14,25 @@
 @extends('layouts.master')
 @section('after_styles')
 <link href="{{ url('assets/css/jquery.hotspot.css') }}" rel="stylesheet">
+<style type="text/css">
+    @media (max-width: 768px) {
+        .mecari{
+            margin-left: -90px !important;
+        }
+        .nextdoor{
+            margin-right: -40px !important;
+        }
+        .offerup{
+            margin-left: -60px !important;
+        }
+        .ebay{
+            margin-right: -60px !important;
+        }
+        .amazon{
+            margin-left: -90px !important;
+        }
+    }
+</style>
 @endsection
 @section('search')
     @parent
@@ -55,7 +74,7 @@
                     <!-- OfferUp -->
                     <div class="hot-spot" x="200" y="400">
                         <div class="circle"></div>
-                        <div class="tooltip">
+                        <div class="tooltip offerup">
                             <div class="text-row">
                                 <h4>OfferUp</h4>
                                 <p>Buy and sell everything from cars and trucks, electronics, furniture, and more. Offerup has new and used items, and it has many categories which makes it a broad platform. Through Offerup, sellers do local meetups and ship items. <br>
@@ -68,7 +87,7 @@
                     <!-- eBay -->
                     <div class="hot-spot" x="700" y="660">
                         <div class="circle"></div>
-                        <div class="tooltip">
+                        <div class="tooltip ebay">
                             <div class="text-row">
                                 <h4>eBay</h4>
                                 <p>Ebay is a widespread categorized marketplace for new and used items. Unlike the other platforms, Ebay has a bidding system option and a buy it now option. Ebay is a great marketplace for items that need to be shipped. <br>
@@ -81,7 +100,7 @@
                     <!-- Amazon -->
                     <div class="hot-spot" x="300" y="660">
                         <div class="circle"></div>
-                        <div class="tooltip">
+                        <div class="tooltip amazon">
                             <div class="text-row">
                                 <h4>Amazon</h4>
                                 <p>Amazon carries most categories and has an enormous customer base. Amazon focuses more on new items, however, they do carry few used items. Amazon is perfect for selling items nationwide. <br>
@@ -92,9 +111,9 @@
                         </div>
                     </div>
                     <!-- Mercari -->
-                    <div class="hot-spot" x="500" y="760">
+                    <div class="hot-spot" x="280" y="150">
                         <div class="circle"></div>
-                        <div class="tooltip">
+                        <div class="tooltip mecari">
                             <div class="text-row">
                                 <h4>Mercari</h4>
                                 <p>Mercari is a broad marketplace that covers many categories. It is a convenient platform because shipping labels and payments are integrated through their app. Through Mercari, sellers ship items nationally. <br>
@@ -120,7 +139,7 @@
                     <!-- Nextdoor -->
                     <div class="hot-spot" x="700" y="150">
                         <div class="circle"></div>
-                        <div class="tooltip">
+                        <div class="tooltip nextdoor">
                             <div class="text-row">
                                 <h4>Nextdoor</h4>
                                 <p>Nextdoor is a platform focused on the surrounding community. Nextdoor has an announcement section and a marketplace section. Nextdoor offers a variety of categories and is a local platform meant for meetups and not shipping. <br>
