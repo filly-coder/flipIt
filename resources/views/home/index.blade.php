@@ -19,6 +19,9 @@
         #hotspotImg .hot-spot .tooltip p {
             font-size: 13px !important;
         }
+        #hotspotImg .hot-spot .tooltip {
+            width: 260px !important;
+        }
 
         .mecari{
             margin-left: -90px !important;
