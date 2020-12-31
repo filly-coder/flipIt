@@ -15,7 +15,11 @@
 @section('after_styles')
 <link href="{{ url('assets/css/jquery.hotspot.css') }}" rel="stylesheet">
 <style type="text/css">
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
+        #hotspotImg .hot-spot .tooltip p {
+            font-size: 13px !important;
+        }
+
         .mecari{
             margin-left: -90px !important;
         }
