@@ -133,7 +133,7 @@ return [
     'Your message has been sent to our moderators' => 'Your message has been sent to our moderators.',
     'Your message has been sent to our moderators. Thank you' => 'Your message has been sent to our moderators. Thank you.',
     
-    'Post a Free Classified' => 'Post a Free Classified',
+    'Post a Classified' => 'Post a Classified',
     'Do you have new or used items lying around that you want to sell? Sell your item through :app_name, its very easy to use, and your item will be posted on many marketplace platforms' => 'Do you have new or used items lying around that you want to sell? Sell your item through :app_name, its very easy to use, and your item will be posted on many marketplace platforms',
     'Create and Manage Items' => 'Create and Manage Items',
     'Become a best seller or buyer. Create and Manage your ads. Repost your old ads, etc.' => 'Become a best seller or buyer. Create and Manage your ads. Repost your old ads, etc.',
