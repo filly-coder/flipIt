@@ -244,11 +244,11 @@ if ($post->category) {
 										<!-- city_id -->
 										<?php $cityIdError = (isset($errors) and $errors->has('city_id')) ? ' is-invalid' : ''; ?>
 										<div id="cityBox" class="form-group row required">
-											<label class="col-md-3 col-form-label{{ $cityIdError }}" for="city_id">{{ t('City') }} <sup>*</sup></label>
+											<label class="col-md-3 col-form-label{{ $cityIdError }}" for="city_id">{{ t('Item Location') }} <sup>*</sup></label>
 											<div class="col-md-8">
 												<select id="cityId" name="city_id" class="form-control sselecter{{ $cityIdError }}">
 													<option value="0" {{ (!old('city_id') or old('city_id')==0) ? 'selected="selected"' : '' }}>
-														{{ t('Select a city') }}
+														{{ t('Enter a city') }}
 													</option>
 												</select>
 											</div>

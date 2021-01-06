@@ -64,7 +64,7 @@
                                                 @if (getSegment(2) != 'create')
                                                     <a href="{{ lurl('posts/' . $post->id . '/edit') }}" class="btn btn-default btn-lg">{{ t('Previous') }}</a>
                                                 @endif
-                                                <a id="nextStepAction" href="{{ url($nextStepUrl) }}" class="btn btn-default btn-lg">{{ t('Skip') }}</a>
+                                                <a id="nextStepAction" href="{{ url($nextStepUrl) }}" class="btn btn-success btn-lg">{{ t('Next') }}</a>
                                             </div>
                                         </div>
                                     

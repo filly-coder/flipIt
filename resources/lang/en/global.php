@@ -173,8 +173,8 @@ return [
     'Select a location' => 'Select a location',
     'Sub-location' => 'Sub-location',
     'Select a sub-location' => 'Select a sub-location',
-    'City' => 'City',
-    'Select a city' => 'Select a city',
+    'Item Location' => 'Item Location',
+    'Enter a city' => 'Enter a city',
     'Cities' => 'Cities',
     
     'How to sell quickly?' => 'How to sell quickly?',

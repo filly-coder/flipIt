@@ -274,10 +274,10 @@ if (file_exists(config('larapen.core.maps.path') . config('country.icode') . '.s
     </div>
 </div>
 <div class="container">
-    <div class="text-center mb-5 mt-5">
+    <div class="text-center my-5">
         <div class="col-xl-12 box-title no-border">
             <div class="inner" style="background: #737373;">
-                <h1 class="text-center">Do you live in the Greater Boston area? </h1>
+                <h1 class="text-center py-2" style="padding-bottom: unset;">Do you live in the Greater Boston area? </h1>
             </div>
         </div>
     </div>

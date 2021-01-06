@@ -37,7 +37,7 @@
 						</div>
 					@else
 						@if (!is_array($field->default))
-							<div class="detail-line col-sm-6 col-xs-12 pb-2 pl-1 pr-1">
+							<div class="detail-line col-sm-6 col-xs-12 pb-2 pl-1 pr-1 {{$field->name == 'Marketplace Choice' ? 'd-none' : ''}}">
 								<div class="rounded-small p-2">
 									<span class="detail-line-label">{{ $field->name }}</span>
 									<span class="detail-line-value">{{ $field->default }}</span>

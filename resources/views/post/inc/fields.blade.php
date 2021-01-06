@@ -136,6 +136,16 @@
 								</label>
 							</div>
 						@endforeach
+
+						<small class="form-text text-muted">
+							@if($field->name == 'Delivery Method')
+								This is how you get your items to your customer
+
+							@elseif($field->name == 'Marketplace Choice')
+								Some Marketplaces like Ebay, Amazon charge additional commissions fees
+								
+							@endif
+						</small>
 					</div>
 					<small id="" class="form-text text-muted">{!! $field->help !!}</small>
 				</div>
