@@ -323,7 +323,7 @@ class Setting extends BaseModel
 					$value['min_file_size'] = '0';
 				}
 				if (!isset($value['max_file_size'])) {
-					$value['max_file_size'] = '2500';
+					$value['max_file_size'] = '4000';
 				}
 				
 				if (!isset($value['image_types'])) {
@@ -336,7 +336,7 @@ class Setting extends BaseModel
 					$value['min_image_size'] = '0';
 				}
 				if (!isset($value['max_image_size'])) {
-					$value['max_image_size'] = '2500';
+					$value['max_image_size'] = '4000';
 				}
 				
 				if (!isset($value['img_resize_width'])) {
