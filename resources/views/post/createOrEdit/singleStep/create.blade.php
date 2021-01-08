@@ -248,7 +248,7 @@
 											<div class="col-md-8">
 												<select id="cityId" name="city_id" class="form-control sselecter{{ $cityIdError }}">
 													<option value="0" {{ (!old('city_id') or old('city_id')==0) ? 'selected="selected"' : '' }}>
-														{{ t('Select a city') }}
+														{{ t('Enter a city') }}
 													</option>
 												</select>
 											</div>
@@ -485,7 +485,7 @@
 				'subCategory': "{{ t('Select a sub-category') }}",
 				'country': "{{ t('Select a country') }}",
 				'admin': "{{ t('Select a location') }}",
-				'city': "{{ t('Select a city') }}"
+				'city': "{{ t('Enter a city') }}"
 			},
 			'price': "{{ t('Price') }}",
 			'salary': "{{ t('Salary') }}",

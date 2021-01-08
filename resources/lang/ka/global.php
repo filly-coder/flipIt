@@ -154,7 +154,7 @@ return [
     'Sub-location' => 'აირჩიეთ ადგილი',
     'Select a sub-location' => 'აირჩიეთ ადგილი',
     'City' => 'ქალაქი',
-    'Select a city' => 'აირჩიეთ ქალაქი',
+    'Enter a city' => 'შედი ქალაქში',
     'Cities' => 'ქალაქი',
     'How to sell quickly?' => 'როგორ გავყიდოთ სწრაფად?',
     'Use a brief title and description of the item' => 'მოიფიქრეთ კარგი სათაური და აღწერილობა',

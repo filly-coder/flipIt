@@ -150,7 +150,7 @@ return [
     'Sub-location' => 'موقع الفرعي',
     'Select a sub-location' => 'حدد موقعا فرعيا',
     'City' => 'مدينة',
-    'Select a city' => 'حدد مدينة',
+    'Enter a city' => 'حدد مدينة',
     'Cities' => 'مدن',
     'How to sell quickly?' => 'كيفية بيع بسرعة؟',
     'Use a brief title and description of the item' => 'استخدم عنوانا موجزا ووصفا للعنصر',

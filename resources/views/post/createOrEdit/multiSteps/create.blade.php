@@ -420,7 +420,7 @@
 				'subCategory': "{{ t('Select a sub-category') }}",
 				'country': "{{ t('Select a country') }}",
 				'admin': "{{ t('Select a location') }}",
-				'city': "{{ t('Select a city') }}"
+				'city': "{{ t('Enter a city') }}"
 			},
 			'price': "Buy It Now Price",
 			'salary': "{{ t('Salary') }}",

@@ -154,7 +154,7 @@ return [
     'Sub-location' => 'Alt-Konum',
     'Select a sub-location' => 'Alt-Konum Seç',
     'City' => 'Şehir',
-    'Select a city' => 'Şehir seç',
+    'Enter a city' => 'Bir şehir girin',
     'Cities' => 'Şehirler',
     'How to sell quickly?' => 'ETKİLİ İLAN İÇİN?',
     'Use a brief title and description of the item' => 'Doğru bir ilan başlığı yazın',

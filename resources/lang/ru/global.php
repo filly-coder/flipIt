@@ -150,7 +150,7 @@ return [
     'Sub-location' => 'Детализированное расположение',
     'Select a sub-location' => 'Выберите Детализированное расположение',
     'City' => 'Населенный пункт',
-    'Select a city' => 'Выберите населенный пункт',
+    'Enter a city' => 'Введите город',
     'Cities' => 'Города',
     'How to sell quickly?' => 'Как быстро продать?',
     'Use a brief title and description of the item' => 'Используйте краткое название и описание элемента',

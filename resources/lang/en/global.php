@@ -175,6 +175,7 @@ return [
     'Select a sub-location' => 'Select a sub-location',
     'Item Location' => 'Item Location',
     'Enter a city' => 'Enter a city',
+    'Enter a city' => 'Enter a city',
     'Cities' => 'Cities',
     
     'How to sell quickly?' => 'How to sell quickly?',

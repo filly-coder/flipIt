@@ -154,7 +154,7 @@ return [
     'Sub-location' => 'Sub-localização',
     'Select a sub-location' => 'Selecionar uma sub-localização',
     'City' => 'Cidade',
-    'Select a city' => 'Selecione uma cidade',
+    'Enter a city' => 'Digite uma cidade',
     'Cities' => 'Cidades',
     'How to sell quickly?' => 'Como vender rapidamente ?',
     'Use a brief title and description of the item' => 'Use um título pequeno e descreva o item',
