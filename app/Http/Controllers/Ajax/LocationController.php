@@ -260,7 +260,7 @@ class LocationController extends FrontController
 			}
 			$cityArr = ['id' => $city->id, 'text' => $text];
 		} else {
-			$cityArr = ['id' => 0, 'text' => t('Select a city', [], 'global', request()->get('languageCode'))];
+			$cityArr = ['id' => 0, 'text' => t('Enter a city', [], 'global', request()->get('languageCode'))];
 		}
 		
 		return response()->json($cityArr, 200, [], JSON_UNESCAPED_UNICODE);

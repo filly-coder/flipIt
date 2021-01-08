@@ -154,7 +154,7 @@ return [
     'Sub-location' => 'ตำแหน่งที่ตั้งย่อม',
     'Select a sub-location' => 'เลือกตำแหน่งที่ตั้งย่อม',
     'City' => 'เมือง',
-    'Select a city' => 'เลือกเมือง',
+    'Enter a city' => 'ป้อนเมือง',
     'Cities' => 'เมือง',
     'How to sell quickly?' => 'ขายอย่างไรให้เร็ว?',
     'Use a brief title and description of the item' => 'ใส่ชื่อและคำบรรยายคร่าวๆ',

@@ -150,7 +150,7 @@ return [
     'Sub-location' => '子位置',
     'Select a sub-location' => '选择一个子位置',
     'City' => '市',
-    'Select a city' => '选择一个城市',
+    'Enter a city' => '输入城市',
     'Cities' => '城市',
     'How to sell quickly?' => '怎么快卖？',
     'Use a brief title and description of the item' => '使用项目的简短标题和说明',

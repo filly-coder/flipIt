@@ -150,7 +150,7 @@ return [
     'Sub-location' => 'サブロケーション',
     'Select a sub-location' => 'サブロケーションを選択',
     'City' => 'シティ',
-    'Select a city' => '都市を選択',
+    'Enter a city' => '都市に入る',
     'Cities' => '都市',
     'How to sell quickly?' => '早く売るには？',
     'Use a brief title and description of the item' => '商品の簡単なタイトルと説明を使用',
