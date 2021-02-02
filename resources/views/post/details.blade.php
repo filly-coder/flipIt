@@ -488,6 +488,7 @@
                                     @endif
 								</div>
 							</div>
+							@if(auth()->user())
 							<div class="mt-5 pb-2">
 								<div class="card-header">Pay for Item</div>
 								<div id="smart-button-container">
@@ -500,6 +501,7 @@
 									    <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
 										</div>
 							</div>
+							@endif
 						</div>
 					</aside>
 				</div>

@@ -318,6 +318,13 @@ class CreateController extends FrontController
 			$post->tmp_token = null;
 			$post->save();
 			session()->forget('tmpPostId');
+
+			try{
+				$post->notify(new PostActivated($post));
+				
+			}catch(Exception $e){
+
+			}
 		}
 		
 		// Redirect to the Post,

@@ -1,3 +1,4 @@
+@if(auth()->check())
 <div class="modal fade" id="contactUser" tabindex="-1" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -12,7 +13,6 @@
 					<span class="sr-only">{{ t('Close') }}</span>
 				</button>
 			</div>
-			
 			<form role="form" method="POST" action="{{ lurl('posts/' . $post->id . '/contact') }}" enctype="multipart/form-data">
 				{!! csrf_field() !!}
 				<div class="modal-body">
@@ -61,14 +61,14 @@
 									   class="form-control{{ $fromNameError }}"
 									   placeholder="{{ t('Your name') }}"
 									   type="text"
-									   value="{{ old('from_name') }}"
+									   value="{{ auth()->user()->name }}"
 								>
 							</div>
 						</div>
 							
 						<!-- from_email -->
 						<?php $fromEmailError = (isset($errors) and $errors->has('from_email')) ? ' is-invalid' : ''; ?>
-						<div class="form-group required">
+						<div class="form-group required d-none">
 							<label for="from_email" class="control-label">{{ t('E-mail') }}
 								@if (!isEnabledField('phone'))
 									<sup>*</sup>
@@ -79,14 +79,14 @@
 									<span class="input-group-text"><i class="icon-mail"></i></span>
 								</div>
 								<input id="from_email" name="from_email" type="text" placeholder="{{ t('i.e. you@gmail.com') }}"
-									   class="form-control{{ $fromEmailError }}" value="{{ old('from_email') }}">
+									   class="form-control{{ $fromEmailError }}" value="{{ auth()->user()->email }}">
 							</div>
 						</div>
 					@endif
 					
 					<!-- from_phone -->
 					<?php $fromPhoneError = (isset($errors) and $errors->has('from_phone')) ? ' is-invalid' : ''; ?>
-					<div class="form-group required">
+					<div class="form-group required d-none">
 						<label for="phone" class="control-label">{{ t('Phone Number') }}
 							@if (!isEnabledField('email'))
 								<sup>*</sup>
@@ -145,11 +145,12 @@
 					<button type="button" class="btn btn-default" data-dismiss="modal">{{ t('Cancel') }}</button>
 					<button type="submit" class="btn btn-success pull-right">{{ t('Send message') }}</button>
 				</div>
-			</form>
-			
+			</form>			
 		</div>
 	</div>
 </div>
+@endif
+
 @section('after_styles')
 	@parent
 	<link href="{{ url('assets/plugins/bootstrap-fileinput/css/fileinput.min.css') }}" rel="stylesheet">
