@@ -140,7 +140,7 @@ class PageController extends FrontController
 	public function paymentNotification(Request $request, Post $post){
 		$data = $request->all();
 		try{
-			Notification::route('mail', 'admin@mail.com')->notify(new PaymentOffer($post, $data));
+			Notification::route('mail', 'flipittoday2019@gmail.com')->notify(new PaymentOffer($post, $data));
 		}catch(Exception $e){
 				return $e;
 		}
