@@ -564,7 +564,7 @@
 	<!-- bxSlider Javascript file -->
 	<script src="{{ url('assets/plugins/bxslider/jquery.bxslider.min.js') }}"></script>
    <!-- Paypal integration -->
-   <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+   <script src="https://www.paypal.com/sdk/js?client-id=ATt9NJr5CZEt6Eu8GTT2WwwqP0ZaXskpyD7_3uapR5eEYg6l8ESVOntEtKHkdNawBJxE-Yi0oR99anJ5&currency=USD" data-sdk-integration-source="button-factory"></script>
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 	<script>
 		$("#busy").hide();
