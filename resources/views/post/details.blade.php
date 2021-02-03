@@ -12,7 +12,26 @@
  * Please read the full License from here - http://codecanyon.net/licenses/standard
 --}}
 @extends('layouts.master')
-
+@section('after_styles')
+    <style>
+      #busy {
+    position: fixed;
+    z-index: 10;
+    background: black;
+    background-size: cover;
+    display: block;
+    opacity: .75;
+    top:        0; 
+    left:       0; 
+    filter: alpha(opacity=75);
+    width: 100%;
+    height: 100%;
+    padding-top: 200px;
+    display: none;
+}
+    </style>
+@endsection
+<div id="busy" class="col-md-12 text-center"></div>
 @section('content')
 	{!! csrf_field() !!}
 	<input type="hidden" id="postId" name="post_id" value="{{ $post->id }}">
@@ -546,7 +565,9 @@
 	<script src="{{ url('assets/plugins/bxslider/jquery.bxslider.min.js') }}"></script>
    <!-- Paypal integration -->
    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 	<script>
+		$("#busy").hide();
 		/* Favorites Translation */
         var lang = {
             labelSavePostSave: "{!! t('Save ad') !!}",
@@ -730,8 +751,30 @@
         },
 
         onApprove: function (data, actions) {
+        	$('#busy').show();
           return actions.order.capture().then(function (details) {
-            alert('Transaction completed by ' + details.payer.name.given_name + '!');
+            var info = {
+            	_token:"{{ csrf_token() }}",
+            	name:details.payer.name.given_name,
+	            email:details.payer.email_address,
+	            amount:details.purchase_units[0].amount.value
+            };
+              $.ajax({
+                 type:'POST',
+                 url:"{{ route('payment-notification',$post) }}",
+                 data: info
+              }).done(function(){
+              Swal.fire({
+								  title: 'Success!',
+								  text: 'Admin Has been notified of your payement',
+								  icon: 'success',
+								  confirmButtonText: 'Cool'
+								});           
+                window.setTimeout(function() {
+                  location.reload;
+                }, 5000);
+              });
+            
           });
         },
 

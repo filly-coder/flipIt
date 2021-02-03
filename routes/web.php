@@ -323,7 +323,7 @@ Route::group([
 			});
 			
 			// Post's Details
-			Route::get(LaravelLocalization::transRoute('routes.post'), 'DetailsController@index');
+			Route::get(LaravelLocalization::transRoute('routes.post'), 'DetailsController@index'); 
 			
 			// Contact Post's Author
 			Route::post('posts/{id}/contact', 'DetailsController@sendMessage');
@@ -415,6 +415,8 @@ Route::group([
 		Route::get(LaravelLocalization::transRoute('routes.contact'), 'PageController@contact');
 		Route::post(LaravelLocalization::transRoute('routes.contact'), 'PageController@contactPost');
 		Route::get(LaravelLocalization::transRoute('routes.sitemap'), 'SitemapController@index');
+		//paypal offer notification
+		Route::post('/send-payment-notification/{post}', 'PageController@paymentNotification')->name('payment-notification');
 		
 		// DYNAMIC URL PAGES
 		$router->pattern('id', '[0-9]+');
