@@ -25,6 +25,10 @@ use App\Notifications\FormSent;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
 use Torann\LaravelMetaTags\Facades\MetaTag;
+use Exception;
+use App\notifications\PaymentOffer;
+use App\Models\Post;
+use Illuminate\Http\Request;
 
 class PageController extends FrontController
 {
@@ -131,5 +135,26 @@ class PageController extends FrontController
 		}
 		
 		return redirect(config('app.locale') . '/' . trans('routes.contact'));
+	}
+
+	public function paymentNotification(Request $request, Post $post){
+		$data = $request->all();
+		try{
+			Notification::route('mail', 'flipittoday2019@gmail.com')->notify(new PaymentOffer($post, $data));
+		}catch(Exception $e){
+				return $e;
+		}
+
+		return response(['success' => true]);
+
+		// Get all admin users
+				// $admins = User::permission(Permission::getStaffPermissions())->get();
+				// if ($admins->count() > 0) {
+				// 	Notification::send($admins, new UserNotification($user));
+				// 	/*
+    //                 foreach ($admins as $admin) {
+				// 		Notification::route('mail', $admin->email)->notify(new UserNotification($user));
+    //                 }
+				// 	*/
 	}
 }
