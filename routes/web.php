@@ -362,7 +362,7 @@ Route::group([
 			Route::post('account/{pagePath}/delete', 'PostsController@destroy');
 			
 			// Conversations
-			Route::get('account/conversations', 'ConversationsController@index');
+			Route::get('account/conversations', 'ConversationsController@index')->name('conversations');
 			Route::get('account/conversations/{id}/delete', 'ConversationsController@destroy');
 			Route::post('account/conversations/delete', 'ConversationsController@destroy');
 			Route::post('account/conversations/{id}/reply', 'ConversationsController@reply');

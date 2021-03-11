@@ -20,8 +20,8 @@ class PaymentOffer extends Notification implements ShouldQueue
      * @return void
      */
 
-    protected $post;
-    protected $data;
+    public $post;
+    public $data;
     public function __construct(Post $post, $data)
     {
         $this->post = $post;
@@ -54,7 +54,7 @@ class PaymentOffer extends Notification implements ShouldQueue
             ->greeting('New Offer')
             ->line($this->data['name'].' has made a new offer on the post below')
             ->line('Your ad <a href="'.$postUrl.'">'.$this->post->title.'</a> has an offer.')
-            ->line("trasaction details\n Email: ".$this->data['email']."\n Amount: $".$this->data['amount'].)
+            ->line("trasaction details\n Email: ".$this->data['email']."\n Amount: $".$this->data['amount'])
             ->line(trans('mail.post_activated_content_4', ['appName' => config('app.name')]));
     }
 

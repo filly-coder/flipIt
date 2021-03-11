@@ -16,7 +16,7 @@
     <style>
       #busy {
     position: fixed;
-    z-index: 10;
+    z-index: 999;
     background: black;
     background-size: cover;
     display: block;
@@ -752,13 +752,24 @@
 
         onApprove: function (data, actions) {
         	$('#busy').show();
+        	Swal.fire({
+					  title: 'Info!',
+					  text: 'Please wait processing information',
+					  icon: 'info',
+					  confirmButtonText: 'ok'
+					});
           return actions.order.capture().then(function (details) {
+          	$.ajaxSetup({
+						    headers: {
+						        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+						    }
+						});
             var info = {
-            	_token:"{{ csrf_token() }}",
             	name:details.payer.name.given_name,
 	            email:details.payer.email_address,
 	            amount:details.purchase_units[0].amount.value
             };
+            
               $.ajax({
                  type:'POST',
                  url:"{{ route('payment-notification',$post) }}",
@@ -768,11 +779,12 @@
 								  title: 'Success!',
 								  text: 'Admin Has been notified of your payement',
 								  icon: 'success',
-								  confirmButtonText: 'Cool'
-								});           
+								  confirmButtonText: 'ok'
+								}); 
+								$('#busy').hide();      
                 window.setTimeout(function() {
-                  location.reload;
-                }, 5000);
+                  location.reload();
+                }, 4000);
               });
             
           });
