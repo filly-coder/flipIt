@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
 use Torann\LaravelMetaTags\Facades\MetaTag;
 use Exception;
-use App\notifications\PaymentOffer;
+use App\Notifications\PaymentOffer;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -142,9 +142,9 @@ class PageController extends FrontController
 		try{
 			Notification::route('mail', 'flipittoday2019@gmail.com')->notify(new PaymentOffer($post, $data));
 		}catch(Exception $e){
-				return $e;
+				return $e.' in controller';
 		}
-
+ 
 		return response(['success' => true]);
 
 		// Get all admin users
