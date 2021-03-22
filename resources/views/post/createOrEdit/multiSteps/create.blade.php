@@ -260,8 +260,15 @@
 												<small id="" class="form-text text-muted">{{ t('Enter the tags separated by commas.') }}</small>
 											</div>
 										</div>
-										
-										
+										<!-- conditions on item sale -->
+										<div class="form-group row required">
+											<label class="col-md-3 col-form-label"></label>
+											<div class="col-md-8">
+												<label class="checkbox mb-0" for="term-0">
+													Flip It takes a 20% fee for sales totalling less than $200. The fee changes to 15% for sales totalling more than $200.
+												</label>
+											</div>
+										</div>
 									{{--	<div class="content-subheading">
 											<i class="icon-user fa"></i>
 											<strong>{{ t('Seller information') }}</strong>

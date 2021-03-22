@@ -777,7 +777,7 @@
               }).done(function(){
               Swal.fire({
 								  title: 'Success!',
-								  text: 'Admin Has been notified of your payement',
+								  text: 'Your offer has been sent.',
 								  icon: 'success',
 								  confirmButtonText: 'ok'
 								}); 
@@ -785,8 +785,7 @@
                 window.setTimeout(function() {
                   location.reload();
                 }, 4000);
-              });
-            
+              });            
           });
         },
 
