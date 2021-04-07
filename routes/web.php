@@ -430,3 +430,5 @@ Route::group([
 		Route::get(LaravelLocalization::transRoute('routes.search-cat'), 'Search\CategoryController@index');
 	});
 });
+
+Route::get('/test', 'App\Http\Controllers\TestController@index');
