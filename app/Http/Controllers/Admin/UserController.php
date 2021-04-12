@@ -270,6 +270,16 @@ class UserController extends PanelController
 				],
 			];
 			$this->xPanel->addField($countryField);
+
+			$this->xPanel->addField([
+				'name'              => 'referral_code',
+				'label'             => 'Referral Code',
+				'type'              => 'text',
+				'placeholder'       => "Referral Code",
+				'wrapperAttributes' => [
+					'class' => 'form-group col-md-6',
+				],
+			]);
 			
 			$phoneHiddenField = [
 				'name'              => 'phone_hidden',
@@ -439,6 +449,15 @@ class UserController extends PanelController
 			],
 		]);
 		$this->xPanel->addField([
+			'name'              => 'referral_code',
+			'label'             => 'Referral Code',
+			'type'              => 'text',
+			'placeholder'       => "Referral Code",
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-6',
+			],
+		]);
+		$this->xPanel->addField([
 			'name'              => 'phone_hidden',
 			'label'             => trans("admin::messages.Phone hidden"),
 			'type'              => 'checkbox',
@@ -489,7 +508,7 @@ class UserController extends PanelController
 		return parent::updateCrud();
 	}
 	
-	// PRIVATE METHODS
+	// PRIVATE METHODS e
 	
 	/**
 	 * @return array

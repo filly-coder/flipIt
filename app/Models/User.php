@@ -96,6 +96,7 @@ class User extends BaseUser
 		'verified_phone',
         'blocked',
         'closed',
+        'referral_code',
     ];
     
     /**

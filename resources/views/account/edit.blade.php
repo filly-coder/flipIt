@@ -299,6 +299,24 @@
 											</div>
 
 											<div class="form-group row">
+												<label class="col-md-3 col-form-label" for="referral_code">Referral Code
+												</label>
+												<div class="col-md-9">
+													<div class="input-group">
+														<div class="input-group-prepend">
+														</div>
+														<input id="referral_code"
+															   name="referral_code"
+															   type="text"
+															   class="form-control @error('referral_code') is-invalid @enderror"
+															   placeholder="please enter your referral code here if any"
+															   value="{{ old('referral_code', $user->referral_code ) }}"
+														>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group row">
 												<div class="offset-md-3 col-md-9"></div>
 											</div>
 											
