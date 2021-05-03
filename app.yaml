@@ -4,7 +4,7 @@ env_variables:
   ## Put production environment variables here.
   APP_NAME: FlipIt
   APP_ENV: production
-  APP_URL: https://flipit-app.uc.r.appspot.com
+  APP_URL: https://myflipitassistant.com
   APP_KEY: base64:t0fqjkhfMu+ajhmVvlL7cDzwVl6TptXuGpx9U5bFMio=
   APP_DEBUG: true
   APP_LOCALE: en
@@ -24,10 +24,10 @@ env_variables:
   APP_PACKAGES_CACHE: /tmp/packages.php
   MAIL_DRIVER: smtp
   MAIL_HOST: smtp.sendgrid.net
-  MAIL_PORT: 465
+  MAIL_PORT: 587
   MAIL_USERNAME: apikey
   MAIL_PASSWORD: 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
-  MAIL_ENCRYPTION: ssl
+  MAIL_ENCRYPTION: tls
   MAIL_FROM_ADDRESS: info@flipit.com
   MAIL_FROM_NAME: FlipIT
 
