@@ -23,10 +23,11 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use NotificationChannels\Twilio\TwilioChannel;
 use NotificationChannels\Twilio\TwilioSmsMessage;
+use Sichikawa\LaravelSendgridDriver\SendGrid;
 
 class ResetPasswordNotification extends Notification implements ShouldQueue
 {
-	use Queueable;
+	use Queueable, SendGrid;
 	
 	protected $user;
 	protected $token;

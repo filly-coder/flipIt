@@ -6,10 +6,11 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Sichikawa\LaravelSendgridDriver\SendGrid;
 
 class TestNotification extends Notification
 {
-    use Queueable;
+    use Queueable, SendGrid;
 
     /**
      * Create a new notification instance.
@@ -41,6 +42,7 @@ class TestNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
+                    ->from('alex@myflipitassistant.com')
                     ->line('Email Testing')
                     ->action('Notification Action', url('/'))
                     ->line('Thank you for using our application!');

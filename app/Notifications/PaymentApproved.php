@@ -27,10 +27,11 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Models\Post;
 use NotificationChannels\Twilio\TwilioChannel;
 use NotificationChannels\Twilio\TwilioSmsMessage;
+use Sichikawa\LaravelSendgridDriver\SendGrid;
 
 class PaymentApproved extends Notification implements ShouldQueue
 {
-	use Queueable;
+	use Queueable, SendGrid;
 	
 	protected $payment;
 	protected $post;

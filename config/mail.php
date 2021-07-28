@@ -64,6 +64,10 @@ return [
 			'transport' => 'sparkpost',
 		],
 		
+		'sendgrid' => [
+            'transport' => 'sendgrid',
+        ],
+		
 		'sendmail' => [
 			'transport' => 'sendmail',
 			'path'      => (env('APP_ENV') == 'local')

@@ -9,10 +9,11 @@ use Illuminate\Notifications\Notification;
 use App\Models\Post;
 use Illuminate\Support\Str;
 use App\Helpers\UrlGen;
+use Sichikawa\LaravelSendgridDriver\SendGrid;
 
 class PaymentOffer extends Notification implements ShouldQueue
 {
-    use Queueable;
+    use Queueable, SendGrid;
 
     /**
      * Create a new notification instance.

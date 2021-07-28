@@ -111,7 +111,7 @@ return [
     |
     */
 
-    'key' => (function_exists('env')) ? env('APP_KEY', 'SomeRandomStringWith32Characters') : 'SomeRandomStringWith32Characters',
+    'key' => (function_exists('env')) ? env('APP_KEY', 'base64:t0fqjkhfMu+ajhmVvlL7cDzwVl6TptXuGpx9U5bFMio=') : 'base64:t0fqjkhfMu+ajhmVvlL7cDzwVl6TptXuGpx9U5bFMio=',
 
     'cipher' => 'AES-256-CBC',
     
@@ -183,6 +183,7 @@ return [
 		Jackiedo\DotenvEditor\DotenvEditorServiceProvider::class,
 		Unicodeveloper\Paystack\PaystackServiceProvider::class,
         Superbalist\LaravelGoogleCloudStorage\GoogleCloudStorageServiceProvider::class,
+        // Sichikawa\LaravelSendgridDriver\SendgridTransportServiceProvider::class,
     
     ],
     

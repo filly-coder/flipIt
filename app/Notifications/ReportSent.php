@@ -21,10 +21,11 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Sichikawa\LaravelSendgridDriver\SendGrid;
 
 class ReportSent extends Notification implements ShouldQueue
 {
-	use Queueable;
+	use Queueable, SendGrid;
 	
 	protected $post;
 	protected $report;

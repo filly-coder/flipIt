@@ -25,10 +25,11 @@ use App\Models\Post;
 use Illuminate\Support\Str;
 use NotificationChannels\Twilio\TwilioChannel;
 use NotificationChannels\Twilio\TwilioSmsMessage;
+use Sichikawa\LaravelSendgridDriver\SendGrid;
 
 class PostActivated extends Notification implements ShouldQueue
 {
-	use Queueable;
+	use Queueable, SendGrid;
 	
 	protected $post;
 	

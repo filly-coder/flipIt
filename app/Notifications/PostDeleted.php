@@ -23,10 +23,11 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Jenssegers\Date\Date;
 use NotificationChannels\Twilio\TwilioChannel;
 use NotificationChannels\Twilio\TwilioSmsMessage;
+use Sichikawa\LaravelSendgridDriver\SendGrid;
 
 class PostDeleted extends Notification implements ShouldQueue
 {
-	use Queueable;
+	use Queueable, SendGrid;
 	
 	protected $post;
 	

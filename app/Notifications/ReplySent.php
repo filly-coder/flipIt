@@ -24,10 +24,11 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Str;
 use NotificationChannels\Twilio\TwilioChannel;
 use NotificationChannels\Twilio\TwilioSmsMessage;
+use Sichikawa\LaravelSendgridDriver\SendGrid;
 
 class ReplySent extends Notification implements ShouldQueue
 {
-	use Queueable;
+	use Queueable, SendGrid;
 	
 	// CAUTION: Conflict between the Model Message $message and the Laravel Mail Message (Mailable) objects.
 	// NOTE: No problem with Laravel Notification.

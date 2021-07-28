@@ -24,10 +24,11 @@ use App\Models\Post;
 use Jenssegers\Date\Date;
 use NotificationChannels\Twilio\TwilioChannel;
 use NotificationChannels\Twilio\TwilioSmsMessage;
+use Sichikawa\LaravelSendgridDriver\SendGrid;
 
 class PostArchived extends Notification implements ShouldQueue
 {
-	use Queueable;
+	use Queueable, SendGrid;
 	
 	protected $post;
 	protected $archivedPostsExpiration;

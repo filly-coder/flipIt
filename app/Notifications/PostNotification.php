@@ -21,10 +21,11 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Jenssegers\Date\Date;
+use Sichikawa\LaravelSendgridDriver\SendGrid;
 
 class PostNotification extends Notification implements ShouldQueue
 {
-	use Queueable;
+	use Queueable, SendGrid;
 	
 	protected $post;
 	
